@@ -66,4 +66,13 @@
 
   <script>
     fetch("https://raw.githubusercontent.com/calebperez/perezwastaken/main/breakfast_list")
-      .then
+      .then(response => response.text())
+      .then(text => {
+        document.getElementById("journalText").textContent = text;
+      })
+      .catch(err => {
+        document.getElementById("journalText").textContent = "Couldn't load breakfast list. Check the file URL.";
+      });
+  </script>
+</body>
+</html>
