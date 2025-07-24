@@ -52,10 +52,6 @@
       text-align: left;
       color: #fff;
     }
-
-    h2 {
-      margin-bottom: 10px;
-    }
   </style>
 </head>
 <body>
@@ -64,20 +60,10 @@
     <h1>hello friends :)</h1>
     <img src="https://media.tenor.com/jwim7U-E7bkAAAAj/rat-spinning.gif" alt="Spinning Rat">
     <div class="journal">
-      <h2>caleb’s breakfast list</h2>
       <div id="journalText">Loading breakfast list...</div>
     </div>
   </div>
 
   <script>
     fetch("https://raw.githubusercontent.com/calebperez/perezwastaken/main/breakfast_list")
-      .then(response => response.text())
-      .then(text => {
-        document.getElementById("journalText").textContent = text;
-      })
-      .catch(err => {
-        document.getElementById("journalText").textContent = "Couldn't load breakfast list. Check the file URL.";
-      });
-  </script>
-</body>
-</html>
+      .then
